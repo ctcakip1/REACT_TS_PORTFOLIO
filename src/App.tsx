@@ -3,6 +3,8 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import Video5 from "./examples/Video5";
+import Video10 from "./examples/Video10/Video10";
+import Video13 from "./examples/Video13";
 
 function App() {
     const [count, setCount] = useState(0);
@@ -26,12 +28,9 @@ function App() {
                 <button onClick={() => setCount((count) => count + 1)}>
                     count is {count}
                 </button>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to test HMR
-                </p>
             </div>
             <p className="read-the-docs">
-                <Video5 name={"tuan anh"} />
+                <Video10 defaultName={"tuan anh"} defaultAge={20} />
             </p>
         </div>
     );
