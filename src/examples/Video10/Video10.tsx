@@ -3,17 +3,17 @@ import "./Video10.css";
 
 export interface ITest {
     name: string;
-    age: number;
+    age: number | string;
     city: string;
 }
 export interface IUser {
     name: string;
-    age: number;
+    age: number | string;
     city: string;
 }
 export interface IProps {
     defaultName: string;
-    defaultAge: number;
+    defaultAge: number | string;
 }
 const Video10 = (props: IProps) => {
     const { defaultName, defaultAge } = props;
@@ -25,14 +25,19 @@ const Video10 = (props: IProps) => {
         "Hồ Chí Minh",
     ]);
 
-    const [users, setUsers] = useState<IUser[]>([
-        { name: "Eric", age: 25, city: "Hà Nội" },
-        { name: "Eric1", age: 26, city: "Đà Nẵng" },
-        { name: "Eric2", age: 27, city: "Hồ Chí Minh" },
-    ]);
-    const [test, setTest] = useState<ITest | null>(null);
-    const [isShowBtn, setIsShowBtn] = useState<boolean>(false);
-
+    const [users, setUsers] = useState<IUser[]>([]);
+    // const [test, setTest] = useState<ITest | null>(null);
+    // const [isShowBtn, setIsShowBtn] = useState<boolean>(false);
+    const [selectedCity, setSelectedCity] = useState<string>("Hà Nội");
+    const handleSubmit = (e: React.FormEvent<HTMLInputElement>) => {
+        const user = { name: name, age: age, city: selectedCity };
+        setUsers([...users, user]);
+        setName("");
+        setAge("");
+    };
+    const handleOnChangeName = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setName(e.target.value);
+    };
     return (
         <>
             <div>Example video 10: hello world </div>
@@ -40,26 +45,48 @@ const Video10 = (props: IProps) => {
                 <div>
                     <label>Name:</label>
                     <br />
-                    <input type="text" value={name} />
+                    <input
+                        type="text"
+                        value={name}
+                        onChange={handleOnChangeName}
+                    />
                     <br />
                 </div>
                 <div>
                     <label>Age:</label>
                     <br />
-                    <input type="text" value={age} />
+                    <input
+                        type="text"
+                        value={age}
+                        onChange={(e) => {
+                            setAge(e.target.value);
+                        }}
+                    />
                     <br />
                 </div>
                 <div>
                     <label>City:</label>
                     <br />
-                    <select>
+                    <select
+                        onChange={(e) => {
+                            setSelectedCity(e.target.value);
+                        }}
+                    >
                         {city.map((item, index) => {
-                            return <option key={item}>{item}</option>;
+                            return (
+                                <option key={item} value={item}>
+                                    {item}
+                                </option>
+                            );
                         })}
                     </select>
                 </div>
 
-                <input type="submit" value="Submit" />
+                <input
+                    type="submit"
+                    value="Submit"
+                    onClick={(e) => handleSubmit(e)}
+                />
             </div>
             <hr />
             <div>List Users:</div>
