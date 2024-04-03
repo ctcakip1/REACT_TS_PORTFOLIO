@@ -3,6 +3,7 @@ import tuananhLogo from "@/assets/img/about/tuan_anh.jpg";
 import myCV from "@/assets/cv-tuan_anh.pdf";
 import { useRef, useEffect } from "react";
 import Parallax from "parallax-js";
+import logo550 from "@/assets/img/about/550x640.jpg";
 const About = () => {
     const sceneEl = useRef(null);
 
@@ -43,10 +44,7 @@ const About = () => {
                                             className="image layer"
                                             data-depth="0.2"
                                         >
-                                            <img
-                                                src="img/about/550x640.jpg"
-                                                alt="550x640"
-                                            />
+                                            <img src={logo550} alt="550x640" />
                                             <div
                                                 className="inner"
                                                 data-img-url={tuananhLogo}
@@ -59,10 +57,7 @@ const About = () => {
                                             className="border layer"
                                             data-depth="0.6"
                                         >
-                                            <img
-                                                src="img/about/550x640.jpg"
-                                                alt="550x640"
-                                            />
+                                            <img src={logo550} alt="550x640" />
                                             <div className="inner"></div>
                                         </div>
                                     </div>
