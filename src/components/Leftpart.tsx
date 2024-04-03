@@ -22,7 +22,7 @@ const LeftPart = () => {
                                 <a href="#skills">Skill</a>
                             </li>
                             <li>
-                                <a href="#services">Project</a>
+                                <a href="#project">Project</a>
                             </li>
                             <li>
                                 <a href="#portfolio">Portfolio</a>
