@@ -1,10 +1,30 @@
 import { TypeAnimation } from "react-type-animation";
 import tuananhLogo from "@/assets/img/about/tuan_anh.jpg";
 import myCV from "@/assets/cv-tuan_anh.pdf";
+import { useRef, useEffect } from "react";
+import Parallax from "parallax-js";
 const About = () => {
+    const sceneEl = useRef(null);
+
+    useEffect(() => {
+        if (sceneEl && sceneEl.current) {
+            const parallaxInstance = new Parallax(sceneEl.current, {
+                relativeInput: true,
+                hoverOnly: true,
+            });
+
+            parallaxInstance.enable();
+
+            return () => parallaxInstance.disable();
+        }
+    }, []);
     return (
         <>
-            <div className="arlo_tm_section relative" id="about">
+            <div
+                className="arlo_tm_section relative"
+                id="about"
+                style={{ paddingTop: "100px" }}
+            >
                 <div className="arlo_tm_about_wrapper_all">
                     <div className="container">
                         <div className="arlo_tm_title_holder">
@@ -17,10 +37,11 @@ const About = () => {
                                     <div
                                         className="about_image_wrap parallax"
                                         data-relative-input="true"
+                                        ref={sceneEl}
                                     >
                                         <div
                                             className="image layer"
-                                            data-depth="0.1"
+                                            data-depth="0.2"
                                         >
                                             <img
                                                 src="img/about/550x640.jpg"
@@ -29,11 +50,14 @@ const About = () => {
                                             <div
                                                 className="inner"
                                                 data-img-url={tuananhLogo}
+                                                style={{
+                                                    backgroundImage: `url(${tuananhLogo})`,
+                                                }}
                                             ></div>
                                         </div>
                                         <div
                                             className="border layer"
-                                            data-depth="0.2"
+                                            data-depth="0.6"
                                         >
                                             <img
                                                 src="img/about/550x640.jpg"
