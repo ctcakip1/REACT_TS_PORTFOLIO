@@ -1,5 +1,8 @@
 import destopLogo from "@/assets/img/logo/g.jpg";
-
+import { FaFacebookF } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 const LeftPart = () => {
     return (
         <>
@@ -25,7 +28,7 @@ const LeftPart = () => {
                                 <a href="#project">Project</a>
                             </li>
                             <li>
-                                <a href="#portfolio">Portfolio</a>
+                                <a href="#contact">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -34,27 +37,22 @@ const LeftPart = () => {
                             <ul>
                                 <li>
                                     <a href="#">
-                                        <i className="xcon-facebook"></i>
+                                        <FaFacebookF />
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <i className="xcon-twitter"></i>
+                                        <FaTwitter />
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <i className="xcon-linkedin"></i>
+                                        <FaYoutube />
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <i className="xcon-instagram"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i className="xcon-behance"></i>
+                                        <FaGithub />
                                     </a>
                                 </li>
                             </ul>

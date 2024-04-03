@@ -205,8 +205,14 @@ body {
 }
 svg {
     fill: currentcolor;
-    width: 15px;
-    height: 15px;
+    // width: 15px;
+    // height: 15px;
+}
+.icon {
+    .svg {
+        width: unset;
+        height: unset;
+    }
 }
 img.svg {
     width: 15px;
@@ -332,6 +338,13 @@ img.svg {
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    .leftpart_inner {
+        .leftpart_bottom {
+            .social_wrap {
+                gap: 10px;
+            }
+        }
+    }
     .logo_wrap {
         background-color: $background-color_2;
         padding: 50px 20px;
@@ -1052,7 +1065,7 @@ img.svg {
     // padding: 90px 0px;
     padding-top: 90px;
     // margin-bottom: 100px;
-    &:last-child{
+    &:last-child {
         padding-bottom: 90px;
         margin-bottom: 100px;
     }
