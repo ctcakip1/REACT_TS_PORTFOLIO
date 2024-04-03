@@ -3,11 +3,20 @@ import Contact from "./content/Contact";
 import HomeCV from "./content/HomeCV";
 import Project from "./content/Project";
 import Skill from "./content/Skill";
-
-const RightPart = () => {
+interface IProps {
+    hideLeftPart: boolean;
+    setHideLeftPart: (value: boolean) => void;
+}
+const RightPart = (props: IProps) => {
     return (
         <>
-            <div className="arlo_tm_rightpart">
+            <div
+                className={
+                    props.hideLeftPart
+                        ? "arlo_tm_rightpart opened"
+                        : "arlo_tm_rightpart"
+                }
+            >
                 <div className="rightpart_inner">
                     <HomeCV />
 
@@ -24,7 +33,7 @@ const RightPart = () => {
                     {/* <!-- /SERVICES --> */}
 
                     {/* <!-- CONTACT & FOOTER --> */}
-                    <Contact/>
+                    <Contact />
                     {/* <!-- /CONTACT & FOOTER --> */}
                 </div>
             </div>
