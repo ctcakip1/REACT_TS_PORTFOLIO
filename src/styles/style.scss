@@ -2004,7 +2004,7 @@ img.svg {
         box-sizing: border-box;
         .short_info_wrap {
             width: 100%;
-            height: auto;
+            height: 200px;
             clear: both;
             float: left;
             -webkit-box-sizing: border-box;
@@ -2158,9 +2158,9 @@ img.svg {
     height: auto;
     clear: both;
     float: left;
-    text-align: left;
+    text-align: center;
     background-color: $background-color_2;
-    padding: 50px 0px;
+    padding: 15px 0px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
