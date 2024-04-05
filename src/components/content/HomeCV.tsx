@@ -1,5 +1,5 @@
 import { TypeAnimation } from "react-type-animation";
-import tuananhLogo from "@/assets/img/hero/image1.jpg"
+import tuananhLogo from "@/assets/img/hero/coder.jpg";
 const HomeCV = () => {
     const handleScrollToAbout = () => {
         const section = document.querySelector("#about");

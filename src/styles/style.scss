@@ -411,6 +411,9 @@ img.svg {
                             width: 35px;
                         }
                     }
+                    &.active {
+                        color: $color_3;
+                    }
                 }
             }
         }
@@ -1067,7 +1070,7 @@ img.svg {
     // margin-bottom: 100px;
     &:last-child {
         padding-bottom: 90px;
-        margin-bottom: 100px;
+        // margin-bottom: 100px;
     }
     .inner_wrap {
         width: 100%;
@@ -1261,6 +1264,7 @@ img.svg {
     }
 }
 .arlo_tm_services_wrap {
+    padding-top: 100px;
     width: 100%;
     height: auto;
     clear: both;
@@ -2872,6 +2876,9 @@ img.svg {
                     font-family: $font-family_2;
                     font-weight: 600;
                     font-size: 19px;
+                    &.active{
+                        color: $color_3;
+                    }
                 }
             }
         }
